@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-27T11:53:50" hostname="DESKTOP-I19OHT9" time="1.52">
+<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-27T13:47:21" hostname="DESKTOP-I19OHT9" time="2.052">
   <properties/>
-  <testcase name="givenEmployeePayrollDB_WhenRetrieved_ShouldMatchTotalEntries" classname="com.bridgelabz.EmployeePayrollServiceTest" time="1.52"/>
-  <system-out><![CDATA[Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@44564bbe
+  <testcase name="givenNewSalaryForEmployee_WhenUpdated_ShouldUpdateInTheDatabaseRecord" classname="com.bridgelabz.EmployeePayrollServiceTest" time="2.052"/>
+  <system-out><![CDATA[Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@79f394c5
+Bill
+Terisa
+Charlie
+Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@3be75fde
+Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@25077d9b
 Bill
 Terisa
 Charlie
