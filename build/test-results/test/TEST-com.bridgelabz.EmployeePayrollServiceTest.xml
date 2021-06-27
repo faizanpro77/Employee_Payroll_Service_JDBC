@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-27T11:53:50" hostname="DESKTOP-I19OHT9" time="1.52">
+  <properties/>
+  <testcase name="givenEmployeePayrollDB_WhenRetrieved_ShouldMatchTotalEntries" classname="com.bridgelabz.EmployeePayrollServiceTest" time="1.52"/>
+  <system-out><![CDATA[Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@44564bbe
+Bill
+Terisa
+Charlie
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
