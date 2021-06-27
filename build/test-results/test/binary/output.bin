@@ -1,9 +1,13 @@
-NConnection successfully established!com.mysql.cj.jdbc.ConnectionImpl@67087d3
+OConnection successfully established!com.mysql.cj.jdbc.ConnectionImpl@63bbe7c1
 Bill
 Terisa
 	Charlie
-OConnection successfully established!com.mysql.cj.jdbc.ConnectionImpl@5d40b91f
-OConnection successfully established!com.mysql.cj.jdbc.ConnectionImpl@5256fcef
-Bill
-Terisa
-	Charlie
+OConnection successfully established!com.mysql.cj.jdbc.ConnectionImpl@60ce6ff7
+Bill
+Terisa
+	Charlie
+OConnection successfully established!com.mysql.cj.jdbc.ConnectionImpl@26c5cb96
+OConnection successfully established!com.mysql.cj.jdbc.ConnectionImpl@301d0948
+Bill
+Terisa
+	Charlie

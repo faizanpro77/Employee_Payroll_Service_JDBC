@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-27T16:03:51" hostname="DESKTOP-I19OHT9" time="2.812">
+<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-06-27T17:16:19" hostname="DESKTOP-I19OHT9" time="2.225">
   <properties/>
-  <testcase name="givenNewSalaryForEmployee_WhenUpdated_ShouldUpdateInTheDatabaseRecord" classname="com.bridgelabz.EmployeePayrollServiceTest" time="2.812"/>
-  <system-out><![CDATA[Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@79f394c5
+  <testcase name="givenEmployeePayrollDB_WhenRetrieved_ShouldMatchTotalEntries" classname="com.bridgelabz.EmployeePayrollServiceTest" time="1.515"/>
+  <testcase name="givenNewSalaryForEmployee_WhenUpdated_ShouldUpdateInTheDatabaseRecord" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.702"/>
+  <system-out><![CDATA[Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@63bbe7c1
 Bill
 Terisa
 Charlie
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@1dc1456b
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@1612c9bf
+Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@60ce6ff7
+Bill
+Terisa
+Charlie
+Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@26c5cb96
+Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@301d0948
 Bill
 Terisa
 Charlie
