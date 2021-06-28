@@ -2,6 +2,7 @@ package com.bridgelabz;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Map;
 
 public class EmployeePayrollService {
 
@@ -45,6 +46,81 @@ public class EmployeePayrollService {
         if(service.equals(IOService.DB_IO)) {
             try {
                 return employeePayrollDBService.getEmployeeDataForDateRange(startDate, endDate);
+            } catch (DatabaseException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        return null;
+    }
+
+    /**
+     * @param service
+     * @return Map containing gender as key and sum of salaries as value
+     */
+    public Map<String, Double> readSumOfSalariesByGender(IOService service) {
+        if(service.equals(IOService.DB_IO)) {
+            try {
+                return employeePayrollDBService.getSumOfSalariesByGender();
+            } catch (DatabaseException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        return null;
+    }
+
+    /**
+     * @param service
+     * @return Map containing gender as key and avg salary as value
+     */
+    public Map<String, Double> readAverageSalaryByGender(IOService service) {
+        if(service.equals(IOService.DB_IO)) {
+            try {
+                return employeePayrollDBService.getAvgSalaryByGender();
+            } catch (DatabaseException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        return null;
+    }
+
+    /**
+     * @param service
+     * @return Map containing gender as key and avg salary as value
+     */
+    public Map<String, Double> readMinSalaryByGender(IOService service) {
+        if(service.equals(IOService.DB_IO)) {
+            try {
+                return employeePayrollDBService.getMinSalaryByGender();
+            } catch (DatabaseException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        return null;
+    }
+
+    /**
+     * @param service
+     * @return Map containing gender as key and max as value
+     */
+    public Map<String, Double> readMaxSalaryByGender(IOService service) {
+        if(service.equals(IOService.DB_IO)) {
+            try {
+                return employeePayrollDBService.getMaxSalaryByGender();
+            } catch (DatabaseException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        return null;
+    }
+
+    /**
+     * @param service
+     * @return Map containing gender as key and employee count as value
+     */
+    public Map<String, Integer> readEmployeeCountByGender(IOService service) {
+        if(service.equals(IOService.DB_IO)) {
+            try {
+                return employeePayrollDBService.getCountByGender();
             } catch (DatabaseException e) {
                 System.out.println(e.getMessage());
             }
