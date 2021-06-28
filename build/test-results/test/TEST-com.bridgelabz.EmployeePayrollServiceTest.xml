@@ -1,35 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-06-28T10:11:55" hostname="DESKTOP-I19OHT9" time="4.301">
+<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-28T14:12:49" hostname="DESKTOP-I19OHT9" time="2.199">
   <properties/>
-  <testcase name="givenEmployeePayrollDB_WhenRetrieved_ShouldMatchTotalEntries" classname="com.bridgelabz.EmployeePayrollServiceTest" time="2.549"/>
-  <testcase name="givenPayrollDB_WhenAverageSalaryRetrievedByGender_ShouldReturnCorrectResult" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.538"/>
-  <testcase name="givenDateRange_WhenRetrievedFromDB_ShouldMatchTotalCount" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.251"/>
-  <testcase name="givenPayrollDB_WhenMaximumSalaryRetrievedByGender_ShouldReturnCorrectResult" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.211"/>
-  <testcase name="givenPayrollDB_WhenSumOfSalaryRetrievedByGender_ShouldReturnCorrectResult" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.159"/>
-  <testcase name="givenPayrollDB_WhenMinimumSalaryRetrievedByGender_ShouldReturnCorrectResult" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.148"/>
-  <testcase name="givenNewSalaryForEmployee_WhenUpdated_ShouldUpdateInTheDatabaseRecord" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.246"/>
-  <testcase name="givenPayrollDB_WhenEmployeeCountRetrievedByGender_ShouldReturnCorrectResult" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.189"/>
-  <system-out><![CDATA[Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@43f15f57
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@98a810f
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@6bfc1e4a
-Error while executing the query
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@64a187fb
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@1a583891
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@50bbac63
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@75910046
-Error while executing the query
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@779d597c
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@59c9382
-Error while executing the query
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@2f35e260
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@7ae89721
-Error while executing the query
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@119e3c47
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@46535c7f
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@75ef1bef
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@3d8efa18
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@5f9932e6
-Error while executing the query
+  <testcase name="givenDateRange_WhenRetrievedFromDB_ShouldMatchTotalCount" classname="com.bridgelabz.EmployeePayrollServiceTest" time="2.199"/>
+  <system-out><![CDATA[Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@71c4af0f
+Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@5bab74c9
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
