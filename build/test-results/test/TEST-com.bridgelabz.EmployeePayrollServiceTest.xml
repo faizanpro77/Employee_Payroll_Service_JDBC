@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-06-27T17:16:19" hostname="DESKTOP-I19OHT9" time="2.225">
+<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-06-28T06:29:04" hostname="DESKTOP-I19OHT9" time="1.849">
   <properties/>
-  <testcase name="givenEmployeePayrollDB_WhenRetrieved_ShouldMatchTotalEntries" classname="com.bridgelabz.EmployeePayrollServiceTest" time="1.515"/>
-  <testcase name="givenNewSalaryForEmployee_WhenUpdated_ShouldUpdateInTheDatabaseRecord" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.702"/>
-  <system-out><![CDATA[Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@63bbe7c1
-Bill
-Terisa
-Charlie
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@60ce6ff7
-Bill
-Terisa
-Charlie
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@26c5cb96
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@301d0948
-Bill
-Terisa
-Charlie
+  <testcase name="givenEmployeePayrollDB_WhenRetrieved_ShouldMatchTotalEntries" classname="com.bridgelabz.EmployeePayrollServiceTest" time="1.285"/>
+  <testcase name="givenDateRange_WhenRetrievedFromDB_ShouldMatchTotalCount" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.235"/>
+  <testcase name="givenNewSalaryForEmployee_WhenUpdated_ShouldUpdateInTheDatabaseRecord" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.31"/>
+  <system-out><![CDATA[Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@2b713c73
+Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@40205787
+Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@46189890
+Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@152e25cf
+Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@2ab9dc13
+Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@4c7d3d44
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
