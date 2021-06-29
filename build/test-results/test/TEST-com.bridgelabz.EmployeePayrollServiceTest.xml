@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-28T17:48:16" hostname="DESKTOP-I19OHT9" time="1.67">
+<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-29T06:12:20" hostname="DESKTOP-I19OHT9" time="1.918">
   <properties/>
-  <testcase name="givenNewEmployee_WhenAddedToDB_ShouldBeInSyncWithDB" classname="com.bridgelabz.EmployeePayrollServiceTest" time="1.67"/>
-  <system-out><![CDATA[Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@79f394c5
-Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@21f13415
+  <testcase name="givenNewEmployee_WhenAddedToDB_ShouldBeInSyncWithDB" classname="com.bridgelabz.EmployeePayrollServiceTest" time="1.918"/>
+  <system-out><![CDATA[Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@579b26c1
+Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@5fd5b9d2
+Connection successfully established!com.mysql.cj.jdbc.ConnectionImpl@6d4dd012
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -167,11 +167,18 @@ public class EmployeePayrollDBService {
      */
     public EmployeePayrollData addEmployeePayrollToDB(String name, double salary, char gender, LocalDate startDate)
             throws DatabaseException {
-        Connection connection = getConnection();
+        Connection connection = null;
         int empId = -1;
         EmployeePayrollData employeePayrollData = null;
 
-        try(Statement statement = connection.createStatement()){
+        try {
+            connection = getConnection();
+            connection.setAutoCommit(false);
+        } catch (SQLException e1) {
+            throw new DatabaseException("Error while setting Auto Commit", ExceptionType.AUTO_COMMIT_ERROR);
+        }
+
+        try(Statement statement = connection.createStatement();){
             String query = String.format("INSERT INTO employee_payrolljdbc (name, gender, salary, start) VALUES ('%s', '%s', '%s', '%s');",
                     name, gender, salary, Date.valueOf(startDate));
             int rowAffected = statement.executeUpdate(query, statement.RETURN_GENERATED_KEYS);
@@ -183,23 +190,48 @@ public class EmployeePayrollDBService {
                 }
             }
         } catch (SQLException e) {
+            try {
+                connection.rollback();
+            } catch (SQLException ex) {
+                throw new DatabaseException("Cannot Roll Back", ExceptionType.UNABLE_TO_ROLL_BACK);
+            }
             throw new DatabaseException("Error while executing the query", ExceptionType.UNABLE_TO_EXECUTE_QUERY);
         }
 
-        try(Statement statement = connection.createStatement()){
+        try(Statement statement = connection.createStatement();){
             double deductions = salary * 0.2;
-            double taxablePay = salary - deductions;
             double tax = (salary - deductions) * 0.1;
-            double netPay =  salary - tax;
-            String query = String.format("INSERT INTO payroll_details" +
-                    "(employee_id, basic_pay, deductions, taxablePay, tax, netPay) VALUES" +
-                    "('%s', '%s', '%s', '%s')", empId, salary, deductions, taxablePay,tax, netPay);
+            double taxablePay = salary - deductions;
+            double netPay = salary - tax;
+
+            String query = String.format("INSERT INTO payroll_details (employee_id, basic_pay, deductions, taxable_pay,tax,net_pay)" +
+                    "VALUES ( %s, %s, %s, %s, %s, %s)", empId,salary,deductions,taxablePay,tax,netPay);
+
             int rowAffected = statement.executeUpdate(query);
             if(rowAffected == 1) {
                 employeePayrollData = new EmployeePayrollData(empId, name, salary, startDate, gender);
             }
         } catch (SQLException e) {
+            try {
+                connection.rollback();
+            } catch (SQLException ex) {
+                throw new DatabaseException("Cannot Roll Back", ExceptionType.UNABLE_TO_ROLL_BACK);
+            }
             throw new DatabaseException("Error while executing the query", ExceptionType.UNABLE_TO_EXECUTE_QUERY);
+        }
+
+        try {
+            connection.commit();
+        } catch (SQLException e) {
+            throw new DatabaseException("Cannot Commit", ExceptionType.UNABLE_TO_COMMIT);
+        }finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    throw new DatabaseException("Cannot close connection object", ExceptionType.UNABLE_TO_CLOSE_CONNECTION);
+                }
+            }
         }
         return employeePayrollData;
     }
