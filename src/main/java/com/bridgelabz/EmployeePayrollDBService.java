@@ -237,6 +237,21 @@ public class EmployeePayrollDBService {
     }
 
     /**
+     * Removes employee from the DB
+     */
+    public int removeEmployee(int id) throws DatabaseException {
+        try(Connection connection = getConnection()){
+            String query = "UPDATE employee_payrolljdbc  SET is_active = false WHERE id = ?";
+            PreparedStatement prepareStatement = connection.prepareStatement(query);
+            prepareStatement.setInt(1, id);
+            int result = prepareStatement.executeUpdate();
+            return result;
+        } catch (SQLException e) {
+            throw new DatabaseException("Error while executing the query", ExceptionType.UNABLE_TO_EXECUTE_QUERY);
+        }
+    }
+
+    /**
      * @returns Connection Object
      * @throws DatabaseException
      *

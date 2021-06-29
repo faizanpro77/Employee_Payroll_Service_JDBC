@@ -3,6 +3,7 @@ package com.bridgelabz;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class EmployeePayrollService {
 
@@ -146,6 +147,17 @@ public class EmployeePayrollService {
         if (result != 0) {
             EmployeePayrollData employeePayrollData = getEmployeeData(name);
             if(employeePayrollData != null) employeePayrollData.setSalary(salary);
+        }
+    }
+
+    public void removeEmployeeFromDB(int id) {
+        try {
+            employeePayrollDBService.removeEmployee(id);
+            employeePayrollDataList = employeePayrollDataList.stream()
+                    .filter(employeePayrollData -> employeePayrollData.getEmpId() != id)
+                    .collect(Collectors.toCollection(ArrayList::new));
+        } catch (DatabaseException e) {
+            System.out.println(e.getMessage());
         }
     }
 

@@ -102,4 +102,12 @@ public class EmployeePayrollServiceTest {
             assertTrue(result);
         } catch (DatabaseException e) {}
     }
+
+    @Test
+    public void givenEmployee_WhenRemovedFromDB_ShouldReturnCorrectEmployeeCount() {
+        EmployeePayrollService employeePayrollService = new EmployeePayrollService();
+        employeePayrollService.readEmployeeData(IOService.DB_IO);
+        employeePayrollService.removeEmployeeFromDB(1);
+        assertEquals(4, employeePayrollService.employeeDataSize());
+    }
 }
